@@ -1032,7 +1032,9 @@ let
 
     mccs = callPackage ../development/ocaml-modules/mccs { };
 
-    mdx = callPackage ../development/ocaml-modules/mdx { };
+    mdx = callPackage ../development/ocaml-modules/mdx {
+      logs = logs.override { jsooSupport = false; lwtSupport = false; };
+    };
 
     mec = callPackage ../development/ocaml-modules/mec { };
 
@@ -1131,8 +1133,6 @@ let
     mirage-flow-combinators = callPackage ../development/ocaml-modules/mirage-flow/combinators.nix { };
 
     mirage-flow-unix = callPackage ../development/ocaml-modules/mirage-flow/unix.nix { };
-
-    mirage-fs = callPackage ../development/ocaml-modules/mirage-fs { };
 
     mirage-kv = callPackage ../development/ocaml-modules/mirage-kv { };
 
@@ -1812,6 +1812,8 @@ let
     twt = callPackage ../development/ocaml-modules/twt { };
 
     type_eq = callPackage ../development/ocaml-modules/type_eq { };
+
+    type_id = callPackage ../development/ocaml-modules/type_id { };
 
     tyxml = callPackage ../development/ocaml-modules/tyxml { };
 

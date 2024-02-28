@@ -305,6 +305,7 @@ in {
   fenics = handleTest ./fenics.nix {};
   ferm = handleTest ./ferm.nix {};
   ferretdb = handleTest ./ferretdb.nix {};
+  filesystems-overlayfs = runTest ./filesystems-overlayfs.nix;
   firefox = handleTest ./firefox.nix { firefoxPackage = pkgs.firefox; };
   firefox-beta = handleTest ./firefox.nix { firefoxPackage = pkgs.firefox-beta; };
   firefox-devedition = handleTest ./firefox.nix { firefoxPackage = pkgs.firefox-devedition; };
@@ -500,6 +501,7 @@ in {
   lxd = pkgs.recurseIntoAttrs (handleTest ./lxd { inherit handleTestOn; });
   lxd-image-server = handleTest ./lxd-image-server.nix {};
   #logstash = handleTest ./logstash.nix {};
+  lomiri-system-settings = handleTest ./lomiri-system-settings.nix {};
   lorri = handleTest ./lorri/default.nix {};
   maddy = discoverTests (import ./maddy { inherit handleTest; });
   maestral = handleTest ./maestral.nix {};
@@ -519,6 +521,7 @@ in {
   matrix-synapse = handleTest ./matrix/synapse.nix {};
   matrix-synapse-workers = handleTest ./matrix/synapse-workers.nix {};
   mattermost = handleTest ./mattermost.nix {};
+  mealie = handleTest ./mealie.nix {};
   mediamtx = handleTest ./mediamtx.nix {};
   mediatomb = handleTest ./mediatomb.nix {};
   mediawiki = handleTest ./mediawiki.nix {};
@@ -538,10 +541,12 @@ in {
   mobilizon = handleTest ./mobilizon.nix {};
   mod_perl = handleTest ./mod_perl.nix {};
   molly-brown = handleTest ./molly-brown.nix {};
+  monado = handleTest ./monado.nix {};
   monica = handleTest ./web-apps/monica.nix {};
   mongodb = handleTest ./mongodb.nix {};
   moodle = handleTest ./moodle.nix {};
   moonraker = handleTest ./moonraker.nix {};
+  morph-browser = handleTest ./morph-browser.nix { };
   morty = handleTest ./morty.nix {};
   mosquitto = handleTest ./mosquitto.nix {};
   moosefs = handleTest ./moosefs.nix {};
@@ -774,6 +779,7 @@ in {
   sanoid = handleTest ./sanoid.nix {};
   scaphandre = handleTest ./scaphandre.nix {};
   schleuder = handleTest ./schleuder.nix {};
+  scrutiny = handleTest ./scrutiny.nix {};
   sddm = handleTest ./sddm.nix {};
   seafile = handleTest ./seafile.nix {};
   searx = handleTest ./searx.nix {};
@@ -802,7 +808,7 @@ in {
   solanum = handleTest ./solanum.nix {};
   sonarr = handleTest ./sonarr.nix {};
   sonic-server = handleTest ./sonic-server.nix {};
-  sourcehut = handleTest ./sourcehut.nix {};
+  sourcehut = handleTest ./sourcehut {};
   spacecookie = handleTest ./spacecookie.nix {};
   spark = handleTestOn [ "x86_64-linux" "aarch64-linux" ] ./spark {};
   sqlite3-to-mysql = handleTest ./sqlite3-to-mysql.nix {};
